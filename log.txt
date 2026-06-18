@@ -1,0 +1,11 @@
+2026-06-01 10:00:01 INFO Server started on port 3000
+2026-06-01 10:00:05 DEBUG Loading config
+2026-06-01 10:00:12 WARNING Cache miss for user 42
+2026-06-01 10:01:03 ERROR Database connection failed
+2026-06-01 10:01:04 ERROR Retry attempt failed
+2026-06-01 10:01:30 DEBUG Connection pool ready
+2026-06-01 10:02:00 Exception in thread main NullPointerException
+2026-06-01 10:02:00     at com.app.Service.run(Service.java:42)
+2026-06-01 10:02:00     at com.app.Main.main(Main.java:11)
+2026-06-01 10:02:01 FATAL Shutting down
+2026-06-01 10:05:00 warning disk almost full
