@@ -1,0 +1,7 @@
+2026-01-14 08:12:03 ERROR timeout hablando con billing-service (5000ms)
+2026-01-14 09:41:18 ERROR conexion rechazada por redis:6379
+2026-01-14 09:41:19 ERROR fallo al leer la sesion del usuario 204
+2026-01-14 11:07:02 ERROR division por cero en calcularDescuento()
+2026-01-14 14:22:40 ERROR disco al 91% en /var/lib/app
+2026-01-14 16:03:55 ERROR token vencido para el cliente movil 3.2.1
+2026-01-14 18:30:09 ERROR deadlock detectado en la tabla pedidos
