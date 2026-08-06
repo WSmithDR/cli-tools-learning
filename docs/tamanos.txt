@@ -1,0 +1,7 @@
+2,0K	src
+12K	docs
+24M	logs
+586M	imagenes
+719M	go
+8,0G	documentos
+39G	snap
