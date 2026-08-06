@@ -1,20 +1,66 @@
-# cli-tools-learning
+# cli-tools-learning · rama `grep-samples`
 
-Personal learning repository for CLI developer tools — version managers, environment managers, and similar utilities.
+Material de práctica para los comandos que **leen y filtran texto**: `grep`,
+`head`, `tail`, `sort`, `wc`, `cut`, `du`.
 
-Each tool gets its own Anki curriculum tracked in [ankify](https://github.com/WSmithDR/ankify). Exercises are command-based (`console` pattern): isolated, standalone, no incremental project to build.
+> Este README es el de ESTA rama y no coincide con el de `main` a propósito.
+> Ver "Esta rama no se mergea" más abajo.
 
-## Tools
+## Qué es una rama de práctica
 
-| Tool | Deck | Status |
-|---|---|---|
-| [pyenv](https://github.com/pyenv/pyenv) | `00. General::Progamming::02. pyenv` | 🔄 in progress |
+Un **punto de partida**, no trabajo en curso. Existe para que la tarjeta de Anki
+que la nombra vuelva a encontrar el mismo árbol en cada repaso — el enunciado da
+por cierto un estado, y si el estado cambió el ejercicio ya no mide lo mismo.
 
-## What lives here
+De ahí las dos reglas que la gobiernan:
 
-- `proposals/` — Anki card proposals generated during learning sessions
-- `.python-version` — active pyenv version for this repo
+**No se mergea. Nunca.** Su destino no es `main`. Nada de merges, PRs ni rebases
+contra `main`; no la borres "porque ya está mergeada" —no lo va a estar— ni le
+aplastes la historia para dejarla prolija. Diverge de `main` y de las otras ramas
+a propósito, y no vuelve a converger.
 
-## Criteria for a tool to live here
+**Todo va commiteado.** Un ejercicio que dependa de un archivo sin commitear
+queda inservible al segundo repaso, y no te enterás hasta que te toca: el reset
+borra también lo ignorado.
 
-A tool belongs in this repo when its exercises are **command-based** — no source files to build or commit between features. If a tool requires a real project with files (GitHub Actions, Docker Compose, etc.), it gets its own dedicated repo.
+Antes de sentarte a practicar:
+
+```bash
+bun <ankify>/bin/lib/practica/cli.ts reset cli-tools-learning
+```
+
+Devuelve el árbol al estado preparado y se lleva lo que hayas dejado del intento
+anterior.
+
+## El material
+
+| Ruta | Para qué |
+|---|---|
+| `assets/eventos.csv` | ~24 mil filas de eventos por servicio y nivel. El archivo grande: `grep` con volumen, y el que domina el ranking de `du` |
+| `logs/` | tres logs de formatos distintos — aplicación, errores y accesos HTTP |
+| `docs/notas.md` | por qué los directorios pesan lo que pesan. **Leelo antes de tocar tamaños** |
+| `docs/tamanos.txt` | un listado de tamaños con sufijo, ya hecho, para practicar `sort -h` sin depender de `du` |
+| `vendor/LICENSES.txt` | texto repetitivo con estructura: bueno para `grep -c` y `uniq` |
+| `tmp/build-output.txt` | salida de compilación simulada |
+| `src/utils.py`, `app.py` | código, para separar coincidencias en fuente de coincidencias en texto plano |
+| `data.txt`, `log.txt` | los archivos chicos originales, para ejercicios de una sola pantalla |
+
+Los seis directorios tienen **tamaños deliberadamente distintos**, y el salto de
+escala de `assets/` no es casual: es lo que hace que olvidarse un flag dé un
+resultado visiblemente equivocado. `docs/notas.md` lo explica y da los números.
+
+Si agregás o borrás material, revisá que ese orden siga en pie — es la mitad de
+lo que los ejercicios de ranking miden.
+
+## Qué tarjetas dependen de esta rama
+
+```
+du -sh */ 2>/dev/null
+sort -h
+tail -5
+du -sh */ 2>/dev/null | sort -h | tail -5
+```
+
+Mazo `00. General::Progamming::Terminal`. Las tres primeras son los átomos; la
+cuarta es el cableado, que es un ejercicio propio: saber encadenar la tubería no
+reemplaza saber cada comando por separado.
