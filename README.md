@@ -39,7 +39,8 @@ anterior.
 | `assets/eventos.csv` | ~24 mil filas de eventos por servicio y nivel. El archivo grande: `grep` con volumen, y el que domina el ranking de `du` |
 | `logs/` | tres logs de formatos distintos — aplicación, errores y accesos HTTP |
 | `docs/notas.md` | por qué los directorios pesan lo que pesan. **Leelo antes de tocar tamaños** |
-| `docs/tamanos.txt` | un listado de tamaños con sufijo, ya hecho, para practicar `sort -h` sin depender de `du` |
+| `docs/tamanos.txt` | salida real de `du -h` —tabulador de separador, coma decimal— para practicar `sort -h` sobre lo que `du` escupe de verdad |
+| `tamanos.txt` (raíz) | el hermano sintético del anterior: espacio de separador y punto decimal (`2.1G backups`). Es el operando de la tarjeta de `sort -h` sobre un archivo, con su salida pegada — **no lo borres ni le cambies el orden**, el enunciado la da por cierta |
 | `vendor/LICENSES.txt` | texto repetitivo con estructura: bueno para `grep -c` y `uniq` |
 | `tmp/build-output.txt` | salida de compilación simulada |
 | `src/utils.py`, `app.py` | código, para separar coincidencias en fuente de coincidencias en texto plano |
