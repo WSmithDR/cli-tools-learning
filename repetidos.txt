@@ -1,0 +1,6 @@
+ERROR timeout
+ERROR timeout
+ERROR timeout
+WARNING retry
+WARNING retry
+INFO ok
