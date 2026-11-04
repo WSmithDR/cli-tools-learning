@@ -1,19 +1,22 @@
 # cli-tools-learning
 
-Personal learning repository for CLI developer tools — version managers, environment managers, and similar utilities.
+Personal learning repository for command-line tools, with versioned practice material on dedicated branches.
 
-Each tool gets its own Anki curriculum tracked in [ankify](https://github.com/WSmithDR/ankify). Exercises are command-based (`console` pattern): isolated, standalone, no incremental project to build.
+Exercises are tracked in [ankify](https://github.com/WSmithDR/ankify). Practice branches are stable starting points: they are never merged or deleted.
 
 ## Tools
 
 | Tool | Deck | Status |
 |---|---|---|
-| [pyenv](https://github.com/pyenv/pyenv) | `00. General::Progamming::02. pyenv` | 🔄 in progress |
+| pdfinfo | Current::Programación de Sistemas::Terminal | Ready on pdf-samples |
 
 ## What lives here
 
-- `proposals/` — Anki card proposals generated during learning sessions
-- `.python-version` — active pyenv version for this repo
+| Material | Branch | File |
+|---|---|---|
+| PDF inspection and conversion | pdf-samples | muestras/FESD_Recopilatorio_Unidad_1.pdf |
+
+The PDF is a byte-for-byte copy of the document supplied by the user. It has 34 pages and is used as fixed input, not as an exercise solution. Keep it unchanged so future reviews remain reproducible. The pdfinfo executable must already be installed.
 
 ## Criteria for a tool to live here
 
